@@ -89,7 +89,7 @@ function Layout() {
     } getDecks();
       return () => abortController.abort();
   }, [ loadDeckInfo, navigate ] );
-
+console.log(decksList)
   /* The "handleDeleteDeck" has one parameter ("deckId") and displays a 
   'window.confirm' screen asking if the user want to delete the specified "deck". 
   If yes, then the 'async function' "deleteAndUpdateDecks" is called which uses a 
