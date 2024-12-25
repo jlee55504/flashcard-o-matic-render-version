@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Flashcard-O-Matic Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Completed Chegg Skills "Flashcard-o-matic" "Qualified" project.
 
-## Available Scripts
+## Overview:
+This project displays decks of study cards. Each card has a question on the front and the answer on the back. Each deck can be 'studied/memorized' by flipping each card in each deck. Users can also edit and delete each card and deck.
 
-In the project directory, you can run:
+## Built with:
+  * React.js
+  * React Bootstrap
+  * CSS3
+  * HTML5
+  * Jest used for testing
 
-### `npm start`
+### I'm only going to be listing the 'files' I had to create/edit.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## src/Layout/index.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Alt text](https://github.com/jlee55504/flashcard-o-matic-project/blob/main/src/imgs/Flashcard-o-matic%20project%20home%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Layout/home' screen")
 
-### `npm test`
+The "Layout" 'function/component' diplays the "Header" 'component' and the 
+"Home.js", "Study.js", "CreateDeck.js", "Deck.js", "EditDeck.js", "AddCard.js", 
+and "EditCard.js" screens depending on the 'URL'. When the 'URL' is "/", the 
+"Home" page is displayed, which diplays a 'button' JSX 'element' with the 'text' 
+"Create Deck", all the "decks" on the local server along with the "view", "Study" 
+and a 'button' JSX 'element' to delete the specific "deck".
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## src/decks/EditDeck.js
 
-### `npm run build`
+![Alt text](https://github.com/jlee55504/flashcard-o-matic-project/blob/main/src/imgs/Flashcard-o-matic%20project%20Edit%20Deck%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Edit Deck' screen")
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The "EditDeck" 'function/component' displays the "nav-bar" 'div', (which 
+contains 'links' to the "Home page" ('src/Layout/index.js')) and "Deck.js" (which 
+displays the specified "decks" info), and a 'form' allowing users to 'edit' and 
+'update' the info of the specified "deck" on the 'local server'.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## src/decks/Deck.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Alt text](https://github.com/jlee55504/flashcard-o-matic-project/blob/main/src/imgs/Flashcard-o-matic-project%20Deck%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Deck' screen")
 
-### `npm run eject`
+The "Deck" 'function/component' displays the the "nav-bar" 'div' (which 
+contains a 'link' to the "Home page" ('src/Layout/index.js')), the info for 
+the specified "deck", 'button' JSX 'elements' to 'edit' ('EditDeck.js'), 
+'study' ('Study.js'), 'add cards to the specified "deck"' ('AddCards.js'), the
+info from every "card" in the specified "deck", and 'button' JSX 'elements' 
+to 'edit' ('EditCard.js') or 'delete' the specified "card" from the specified "deck".
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## src/decks/CreateDeck.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Alt text](https://github.com/jlee55504/flashcard-o-matic-project/blob/main/src/imgs/Flashcard-o-matic%20project%20Create%20Deck%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Create Deck' screen")
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The "CreateDeck" 'function/component' displays the "nav-bar" 'div' containing 
+a 'link' to the "Home page" ('src/Layout/index.js') and a 'form' allowing users 
+to 'create' a new "deck" and add it to the 'local server'.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## src/cards/Study.js
 
-## Learn More
+![Alt text](https://github.com/jlee55504/flashcard-o-matic-project/blob/main/src/imgs/Flashcard-o-matic%20project%20Study%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Study' screen")
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The "Study" 'function/component' displays the "nav-bar" 'div' which (contains
+ a 'links' to the "Home page" ('src/Layout/index.js')) and "Deck.js" (which 
+displays the specified "decks" info) and the data of the "front" and "back" 
+'keys' of the specified "deck" 'object', with the ability to 'redisplay' the 
+"cards" after all the "cards" have been displayed or to go back to the "Home 
+page" ('src/Layout/index.js').
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## src/cards/EditCard.js
 
-### Code Splitting
+![Alt text](https://github.com/jlee55504/flashcard-o-matic-project/blob/main/src/imgs/Flashcard-o-matic%20project%20Edit%20Card%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Edit Card' screen")
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The "EditCard" 'function/component' displays the "nav-bar" 'div'. which 
+(contains a 'links' to the "Home page" ('src/Layout/index.js')) and "Deck.js" 
+(which displays the specified "decks" info) and a 'form' which allows users to 
+'edit' and update the 'text' of the specified "card" in the specified "deck".
 
-### Analyzing the Bundle Size
+## src/cards/AddCard.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Alt text](https://github.com/jlee55504/flashcard-o-matic-project/blob/main/src/imgs/Flashcard-o-matic%20project%20Add%20Card%20screen%20image.png?raw=true "Flashcard-o-matic-project 'Add Card' screen")
 
-### Making a Progressive Web App
+The "AddCard" 'function/component' allows users to add a "card" to the 
+specific "deck" and 'local server'.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## src/Layout/style.css
+CSS styling for all the 'files' to replicate Chegg Skill's example web page.
